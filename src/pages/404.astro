@@ -1,0 +1,55 @@
+---
+import Layout from '../layouts/Layout.astro';
+// import { Image } from 'astro:assets';
+// import NotFoundSvg from '~/assets/not_found.png';
+---
+
+<Layout title="404 | Bee Empire." description={`Oops Bees must have destroyed this page`}>
+    <main>
+        <div class="wrapper">
+            <!-- <Image class="galaxy" src={NotFoundSvg} alt="" loading="eager" /> -->
+            <four-oh-four>
+                <div class="hero-text">
+                    <h1>404</h1>
+                    <p>Blame the Bees</p>
+                    <a href="/">take me back home</a>
+                </div>
+            </four-oh-four>
+        </div>
+    </main>
+</Layout>
+
+<style>
+	main {
+		height: 90svh;
+	}
+	.wrapper {
+		margin: -1.5rem calc(-1 * 1rem);
+		padding-block: 1.5rem;
+		display: grid;
+		grid-template: 100% / 100%;
+		overflow: hidden;
+	}
+	.wrapper > * {
+		grid-column: 1 / -1;
+		grid-row: 1 / -1;
+		place-self: center;
+	}
+
+	.galaxy {
+		min-height: 45rem;
+		object-fit: cover;
+	}
+	.hero-text {
+		text-align: center;
+		padding: 0 1rem;
+		color: hsl(224, 6%, 77%);
+	}
+	.hero-text h1 {
+		font-size: 6rem;
+		color: white;
+	}
+	.hero-text p {
+		font-size: 1.25rem;
+	}
+</style>
